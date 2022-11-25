@@ -1,33 +1,33 @@
 
-PROCEDURE dot_product(arr1,arr2:ARRAY_OF integer, var pc:integer)
+PROCEDURE dot_product(arr1,arr2:ARRAY_OF integer, var ps:integer)
 VAR
 
     i:integer;
     
 BEGIN
 FOR i FROM 0 TO arr1.length  DO
-    pc:= pc + (arr1[i] * arr2[i])
+    ps:= ps + (arr1[i] * arr2[i])
 END_FOR
    
 END
 FUNCTION dot_product(arr1,arr2: ARRAY_OF integer) : integer;
 VAR
     i:integer;
-    pc:integer;
+    ps:integer;
 BEGIN
-    pc:=0;
+    ps:=0;
     FOR i FROM 0 TO arr1.length  DO
-    pc:= pc + (arr1[i] * arr2[i])
+    ps:= ps + (arr1[i] * arr2[i])
 END_FOR
-    RETURN pc ;
+    RETURN ps ;
 END
 ALGORITHM  Dot product
 VAR
     n,i:integer;
 arr1,arr2: ARRAY_OF integer;
-   pc:integer;
+   ps:integer;
 BEGIN
-    pc:=0;
+    ps:=0;
     read(n)
     FOR i FROM 0 TO n STEP step  DO
         
@@ -38,8 +38,8 @@ IF (arr1.lenghth <> arr2.length) THEN
     write("The two vectors are from different size");
 ELSE
 
-    pc:= dot_product(arr1,arr2);
-    IF (pc = 0 ) THEN
+    ps:= dot_product(arr1,arr2);
+    IF (ps = 0 ) THEN
         write(" the two vectors are ortho");
     ELSE
                 write(" the two vectors aren't ortho");
